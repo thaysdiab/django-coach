@@ -12,8 +12,8 @@
     <p>{{ msg }}</p>
 
 
-    <form action="/" method="post">
-        {% csrf_token %} 
+    <form action="/" method="post"> 
+        {% csrf_token %} <!-- A proteção CSRF funciona verificando um segredo em cada requisição POST. Isso impede que um usuário malicioso possa simplesmente “reenviar” um form POST para o seu website e consiga que outro usuário logado involuntariamente submeta esse form. O usuário malicioso teria que conhecer o segredo, que é específico para cada usuário (através de um cookie).  -->
         <label for="">Nome: </label>
         <input name="nome" type="text" required>
 

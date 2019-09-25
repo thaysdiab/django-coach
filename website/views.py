@@ -11,10 +11,10 @@ def index(request):
         coach.inspirador = request.POST['inspirador']
         coach.save()
 
-        args = {
+        args = { ## Passando a msg de retorno quando o cliente enviar o formulário
             'msg': 'Até quem fim meus programas estão dando certo Uhuuuuuuuuuuuuuuu'
         }
-        return render(request, 'index.html', args)
+        return render(request, 'index.html', args) ## Passando o retorno para o index
     
     return render(request, 'index.html')
 
