@@ -18,3 +18,9 @@ def index(request):
     
     return render(request, 'index.html')
 
+def listar_coachs(request):
+    listar_coachs = Coach.objects.all()
+    args = {
+        'listar_coachs': listar_coachs
+    }
+    return render(request, 'listar_coachs.html', args)
