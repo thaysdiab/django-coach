@@ -11,6 +11,8 @@
 <body>
     <marquee><h1>Lista de suas frases perfeitas</h1></marquee>
     {% for item in listar_coachs %}
+    <!-- {% %} assim é para o django usar lógica
+    {{ }} assim é para variavel -->
         <p><strong>Nome do Coach:</strong>{{item.nome}}</p> 
         <p><strong>Motive-se:</strong>{{item.frase}}</p> 
         <p><strong>Quem foi seu inspirador: </strong>{{item.inspirador}}</p>
